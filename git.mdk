@@ -116,7 +116,7 @@ $ git add script.R
 ```
 2. Confere se está tudo certo
 ```
-git status
+$ git status
 ```
 3. Faça o commit daquele grupo de mudanças
 ```
@@ -159,7 +159,7 @@ c6ec70a44ccef2a32ebab9451401b2fb5a291623 fixed bug in ExtendMatrix
 # Depois que criou o repositório
 
 ```
-git clone git@github.com:diogro/MEU_PRIMEIRO_REPO.git
+$ git clone git@github.com:diogro/MEU_PRIMEIRO_REPO.git
 ```
 
 * Vai criar uma pasta chamada MEU_PRIMEIRO_REPO já com um repositório git
@@ -181,7 +181,7 @@ $ git push (manda as mudanças para o servidor)
 
 ![](figures/two-branches.png) 
 ```
-  git branch testing
+$ git branch testing
 ```
 
 # HEAD e checkout
@@ -194,7 +194,7 @@ $ git push (manda as mudanças para o servidor)
 
 ![](figures/head-to-testing.png) 
 ```
-  git checkout testing
+$ git checkout testing
 ```
 
 # Alterando um branch
