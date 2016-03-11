@@ -1,54 +1,89 @@
 [INCLUDE=presentation]
-Title         : Demo presentation in Madoko
-Sub Title     : In both HTML and PDF
-Author        : Daan Leijen
-Affiliation   : Microsoft Research
-Email         : daan@microsoft.com
+Title         : Introdução ao git(hub)
+Sub Title     : R-Users
+Author        : Diogo Melo
+Affiliation   : IB- USP
+Email         : diogro@gmail.com
 Reveal Theme  : sky
 Beamer Theme  : singapore
 
 [TITLE]
 
-# Content
+# Outline
 
 [TOC]
 
-# Madoko Presentation
-
-Using [Madoko] it is easy to create beautiful presentations.
-
-* [Html][slide]:
-  Uses the `Reveal.js` library by [Hakim El Hattab](http://hakim.se).\
-  This slide demo in Madoko is an adaption of his online demo.
-* [Pdf][slide-pdf]:
-  Uses the `Beamer` package for LaTeX
-* [Source][slide-mdk]:
-  Click to see the source of this presentation.
-
-
-[madoko]: http://madoko.codeplex.com
-
-## Reveal.js
-
-`reveal.js` is a framework for easily creating beautiful presentations using
-HTML. You'll need a browser with support for CSS 3D transforms to see it in
-its full glory. 
-
-And any Madoko features just work. Here is some math:
+# O que é o git?
 
 ~ Begin Framed { padding:1ex; margin-top:1ex }
-A famous equation is $e = mc^2$, but this one is 
-famous too:
-
-~ Equation  {#eq-gaussian}
-\int_{-\infty}^\infty e^{-a x^2} d x = \sqrt{\frac{\pi}{a}} 
-~
+Um sistema de controle de versão para qualquer tipo de arquivo
 ~ End Framed
 
-~~ Notes
-Oh hey, these are some notes. They'll be hidden in your presentation, but you
-can see them if you open the speaker notes window (hit 's' on your keyboard).
-~~
+* Tipo um track changes on-steroids para sua vida
+
+* Forma de guardar todo o histórico de mudanças de um grupo de arquivos
+
+## Por que um grupo de usuários de *R* começou com git?
+
+* Tudo que nós fazemos no R fica salvo em arquivos de script
+
+* Esse código é alterado ao longo do tempo e essas mudanças frequentemente são perdidas
+
+# Como guardar versões antigas de um código?
+
+* {.fragment} Opção 1: Salvar um zilhão de arquivos chamados: 
+
+  - {.fragment} script_1.R
+  - {.fragment} script_2.R
+  - {.fragment} script_2_modificado.R
+  - {.fragment} script_2_final.R
+  - {.fragment} script_3_finalMESMO.R
+  - {.fragment} script_1_denovo_pq_o_3_tava_zuado.R ...
+
+Ou ...
+
+* {.fragment} Opção 2: Usar um sistema de controle de versão
+
+
+# Ideia geral de controle de versão
+
+~ Begin Columns
+~ Column { width:50% }
+* Checkout: versão do arquivo que está acessivel naquele momento
+~
+~ Column
+![Version control]
+~
+~ End Columns
+
+[Version control]: figures/local.png "A Monarch butterfly" { width:400px; vertical-align:middle }
+
+# Como eu consigo um git para chamar de meu?
+
+* Linux: <http://git-scm.com/download/linux>
+```
+sudo apt-get install git
+sudo yum install git-all
+```
+* Mac: <http://git-scm.com/download/mac>
+* Windows: <http://git-scm.com/download/win>
+
+# Commits
+
+![commits](figures/snapshots.png)
+
+* Cada commit guarda o estado de todos os arquivos no repositório em um dado momento
+
+# Seu dia a dia no git
+
+![dia a  dia](figures/areas.png)
+
+* Stage: colocar as mudanças de um arquivo num commit
+* Commit: colocar todas as mudanças que foram "stagged" num commit
+
+# O ciclo de vida de um arquivo no git
+
+![lifecycle](figures/lifecycle.png)
 
 ## Code
 
@@ -61,59 +96,6 @@ function sqr( x ) {
 }
 ```
 We used `\(` and `\)` to escape into markdown to write &pi;.
-
-<!-- Example of nested vertical slides -->
-~ Begin Vertical { data-background:Gainsboro }
-
-## Vertical Slides {#vertical}
-Slides can be nested inside of other slides,
-try pressing [down].
-
-[![arrowdown]][down]
-
-
-[down]: # { .navigate-down }
-[arrowdown]: images/arrow.png "Down arrow" { width:178px; height:238px }
-
-## Basement Level 1
-Press down or up to navigate.
-
-## Basement Level 2
-
-Use `columns` to put blocks next to each other:
-
-~ Begin Columns
-~ Column { width:50% }
-A monarch butterfly (shown to the right)
-spends the winter in Mexico.
-~
-~ Column
-![butterfly]
-~
-~ End Columns
-
-[butterfly]: images/butterfly.png "A Monarch butterfly" { width:280px; vertical-align:middle }
-
-
-<!-- 
-For local background images, we need to have a reference to the image
-such that it's data gets embedded into the HTML page. We define
-it using "display=none" so it is hidden in the presentation. 
-We can then refer to the image in "data-background-image". 
--->
-
-![bfly]
-[bfly]: images/butterfly.png "Butterfly" { display:none }
-
-## Basement Level 3 { data-background-image:images/butterfly.png }
-That's it, time to go back up.
-
-[![arrowup]][back2]
-
-[arrowup]:  images/arrow.png "Up arrow" { width:178px; height:238px; transform:rotate(180deg) }
-[back2]:    #vertical { .image }
-
-~ End Vertical
 
 
 ## Themes {#themes}
