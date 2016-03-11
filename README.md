@@ -1,11 +1,13 @@
 Title         : Introdução ao git(hub)
+
 Sub Title     : R-Users
+
 Author        : Diogo Melo
+
 Affiliation   : IB- USP
+
 Email         : diogro@gmail.com
-Reveal Theme  : solarized
-Beamer Theme  : singapore
-Transition    : linear
+
 
 # O que é o git? 
 
@@ -25,16 +27,16 @@ Um sistema de controle de versão para qualquer tipo de arquivo
 
 * Opção 1: Salvar um zilhão de arquivos chamados: 
 
-  -  script_1.R
-  -  script_2.R
-  -  script_2_modificado.R
-  -  script_2_final.R
-  -  script_3_finalMESMO.R
-  -  script_1_denovo_pq_o_3_tava_zuado.R ...
+  - script_1.R
+  - script_2.R
+  - script_2_modificado.R
+  - script_2_final.R
+  - script_3_finalMESMO.R
+  - script_1_denovo_pq_o_3_tava_zuado.R ...
 
 Ou...
 
-* Opção 2: Usar um sistema de controle de versão
+*  Opção 2: Usar um sistema de controle de versão
 
 
 # Ideia geral de controle de versão
@@ -99,7 +101,7 @@ $ git add script.R
 ```
 2. Confere se está tudo certo
 ```
-git status
+$ git status
 ```
 3. Faça o commit daquele grupo de mudanças
 ```
@@ -137,10 +139,12 @@ c6ec70a44ccef2a32ebab9451401b2fb5a291623 fixed bug in ExtendMatrix
 
 <https://www.github.com/diogro/>
 
+[github]: figures/github_home.png "Version control" { width:600px; vertical-align:middle }
+
 # Depois que criou o repositório
 
 ```
-git clone git@github.com:diogro/MEU_PRIMEIRO_REPO.git
+$ git clone git@github.com:diogro/MEU_PRIMEIRO_REPO.git
 ```
 
 * Vai criar uma pasta chamada MEU_PRIMEIRO_REPO já com um repositório git
@@ -162,7 +166,7 @@ $ git push (manda as mudanças para o servidor)
 
 ![](figures/two-branches.png) 
 ```
-  git branch testing
+$ git branch testing
 ```
 
 # HEAD e checkout
@@ -175,7 +179,7 @@ $ git push (manda as mudanças para o servidor)
 
 ![](figures/head-to-testing.png) 
 ```
-  git checkout testing
+$ git checkout testing
 ```
 
 # Alterando um branch
@@ -195,9 +199,7 @@ $ git checkout master
 
 # Juntando dois branches
 
-~ Begin Framed { padding:1ex; margin-top:1ex }
 Podemos juntar modificações feitas de ponto de partida diferentes fazendo um merge!
-~ End Framed
 
 ![](figures/basic-branching-6.png) 
 
