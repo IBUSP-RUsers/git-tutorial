@@ -135,11 +135,7 @@ c6ec70a44ccef2a32ebab9451401b2fb5a291623 fixed bug in ExtendMatrix
 
 # Mas eu quero usar o github!!11ONZE
 
-![github]
-
 <https://www.github.com/diogro/>
-
-[github]: figures/github_home.png "Version control" { width:600px; vertical-align:middle }
 
 # Depois que criou o repositório
 
