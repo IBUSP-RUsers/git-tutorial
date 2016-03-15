@@ -7,6 +7,7 @@ Email         : diogro@gmail.com
 Reveal Theme  : solarized
 Beamer Theme  : singapore
 Transition    : linear
+Locale        : pt_br
 
 <script>
 revealConfig.transition='linear';
@@ -20,11 +21,11 @@ revealConfig.transition='linear';
 Um sistema de controle de versão para qualquer tipo de arquivo
 ~ End Framed
 
-* Tipo um track changes on-steroids para sua vida
+* Tipo um track-changes-on-steroids para sua vida
 
 * Forma de guardar todo o histórico de mudanças de um grupo de arquivos
 
-# Por que um grupo de usuários de *R* começou com git?
+# Por que um grupo de usuários de R começou com git?
 
 * Tudo que nós fazemos no R fica salvo em arquivos de script
 
@@ -32,7 +33,7 @@ Um sistema de controle de versão para qualquer tipo de arquivo
 
 # Como guardar versões antigas de um código?
 
-* {.fragment} Opção 1: Salvar um zilhão de arquivos chamados: 
+* Opção 1: Salvar um zilhão de arquivos chamados: 
 
   - {.fragment} script_1.R
   - {.fragment} script_2.R
@@ -67,12 +68,12 @@ Ou...
 ```
 $ sudo apt-get install git
 $ sudo yum install git-all
-``` 
+```
+ 
   * Mac: <http://git-scm.com/download/mac>
   * Windows: <http://git-scm.com/download/win>
 
 * Chamar de meu:
-
 ```
 $ git config --global user.name "Diogo Melo"
 $ git config --global user.email diogro@gmail.com
@@ -89,7 +90,7 @@ $ git config --global user.email diogro@gmail.com
 ![dia a  dia](figures/areas.png)
 
 * Stage: colocar as mudanças de um arquivo num commit
-* Commit: colocar todas as mudanças que foram "stagged" num commit
+* Commit: colocar todas as mudanças que foram "staged" num commit
 
 # O ciclo de vida de um arquivo no git
 
@@ -100,17 +101,16 @@ $ git config --global user.email diogro@gmail.com
 1. Crie uma pasta para cada projeto (ou use um projeto no RStudio)
 2. Navege até essa pasta no terminal/powershell
 3. Digite:
-
 ```
 $ git init
 ```
 
 Isso vai criar um repositório de git dentro da pasta e todas as mudanças lá dentro vão ser acompanhadas
 
-# Seu dia a dia
+# Seu dia a dia local
 
 1. Edite um arquivo "script.R" (ou vários)
-2. No terminal, adicione o arquivo à stagging area:
+2. No terminal, adicione o arquivo à staging area:
 ```
 $ git add script.R
 ```
@@ -135,7 +135,7 @@ d7e09f3de4a7be039da68aad30726aa53ae2890a removing phytools dependency
 870b858dfb0a5ec856b7b41be64052c7a75e5aa2 bug in extend matrix
 8b915c4f9a32cbfbe106108d88087cb5fe7d326c new install instructions
 d8c11e029f3cb55d9039a1febba0ebe9f5c156f7 Better comparison of posteriors
-d4de5cd277c1977e74146aa2d4eb1a9d0323290a acctualy fast C++ implementation
+d4de5cd277c1977e74146aa2d4eb1a9d0323290a acctualy fast C++ implementation of RS
 2f335ed11bee08ecef6ef4a77a426f5f00120e09 More robust Bootstrap
 83b595845a9a68c014bd6dffa3d6df1eb421bd1c Trycatch in montecarlo
 8413d73b72b44e68b1b32e435328e61aeb083be7 Nem drift test for 2 populations and minor correction in AncestralStates help
@@ -184,13 +184,14 @@ $ git push (manda as mudanças para o servidor)
 $ git branch testing
 ```
 
-# HEAD e checkout
+# Escolhendo um branch
 
+~ Begin Framed { padding:1ex; margin-top:1ex }
+HEAD é quem vc está realmente vendo
+~ End Framed
 ![](figures/head-to-master.png) 
 
-* HEAD é quem vc está realmente vendo
-
-# Branches e checkout
+# Mudando o HEAD com checkout
 
 ![](figures/head-to-testing.png) 
 ```
@@ -247,7 +248,6 @@ $ git merge origin/master
 ```
 
 * Ou...
-
 ```
 $ git init
 $ git remote add origin git@github.com:diogro/MEU_PRIMEIRO_REPO.git
@@ -261,7 +261,7 @@ $ git pull
 
 # Referências
 
-* O livro, the book, the only book, the book of love, THE GITBOOK
+* GITBOOK! O livro, the book, the only book, the book of love 
   - <https://git-scm.com/book/en/v2>
 
 * Tutoriais do github
